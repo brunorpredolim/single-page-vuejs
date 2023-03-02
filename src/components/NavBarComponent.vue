@@ -18,7 +18,6 @@
         <a rel="noopener noreferrer" target="_blank" href="#" class="px-3 nav-link" role="button">
           <button type="button" class="button btn btn-outline-success">Currículo</button>
         </a>
-
       </div>
     </div>
   </nav>
