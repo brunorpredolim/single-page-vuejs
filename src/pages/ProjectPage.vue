@@ -3,6 +3,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faFolder } from "@fortawesome/free-solid-svg-icons";
+import items  from "../utils/items.json"
 
 
 library.add(faGithub, faFolder)
@@ -14,27 +15,10 @@ class ProjectPage {
 
     data() {
 
+
         this.show = false;
         return {
-            items: [{
-                title: 'Projeto 1',
-                text: 'Desc',
-                skills: 'Muitas',
-                img: 'https://inovaconcreto.com.br/wp-content/uploads/2019/03/construcao-de-casas-principais-erros.png'
-            },
-            {
-                title: 'Projeto 2',
-                text: 'Desc 2',
-                skills: 'SKILL SKILL',
-                img: 'https://inovaconcreto.com.br/wp-content/uploads/2019/03/construcao-de-casas-principais-erros.png'
-            },
-            {
-                title: 'Projeto 3',
-                text: 'Desc 3',
-                skills: 'TEste Teste',
-                img: 'https://inovaconcreto.com.br/wp-content/uploads/2019/03/construcao-de-casas-principais-erros.png'
-            }
-            ],
+            items: items,
 
         }
     }

@@ -1,6 +1,7 @@
 <template>
   <LoaderComponent/>
   <NavBarComponent />
+  
   <HomePage />
   <ProjectPage/>
   <AboutPage/>
