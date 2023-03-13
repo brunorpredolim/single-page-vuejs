@@ -2,7 +2,7 @@
   <nav class="header-nav navbar navbar-expand-lg navbar-light bg-dark fixed-top">
 
     <div class="react-reveal">
-      <a href="#home" class="brand-name ml-5 navbar-brand">Bruno.</a>
+      <a v-bind:href=items[0].idName class="brand-name ml-5 navbar-brand">Bruno.</a>
     </div>
 
     <button aria-controls="responsive-navbar-nav" type="button" aria-label="Toggle navigation"
@@ -11,10 +11,8 @@
     </button>
     <div class="navbar-collapse collapse" id="responsive-navbar-nav">
       <div style="padding-left:1000px" class="ml-auto mr-5 navbar-nav">
-        <a href="#home" data-rb-event-key="#home" class="px-3 nav-link">Home</a>
-        <a href="#about" data-rb-event-key="#about" class="px-3 nav-link">Sobre</a>
-        <a href="#project" data-rb-event-key="#project" class="px-3 nav-link" active>Projetos</a>
-        <a href="#contact" data-rb-event-key="#contact" class="px-3 nav-link">Contato</a>
+        <a v-for="(item, index) in items" v-bind:href=item.idName v-bind:data-rnameIdb-event-key=item.idName
+          class="px-3 nav-link" v-bind:id="index" :key='item.id'>{{ item.name }}</a>
         <a rel="noopener noreferrer" target="_blank" href="#" class="px-3 nav-link" role="button">
           <button type="button" class="button btn btn-outline-success">Currículo</button>
         </a>
@@ -24,6 +22,8 @@
 </template>
 
 <script>
+
+import items from "../content/aboutItem.json"
 
 const changeBackground = () => {
   let header = document.getElementsByClassName('header-nav')[0];
@@ -35,12 +35,18 @@ const changeBackground = () => {
 };
 window.addEventListener('scroll', changeBackground);
 
-export default {
-  name: 'NavBarComponent',
-  props: {
 
+class NavBarComponent {
+
+  name = 'NavBarComponent'
+  props = {
   }
 
-
+  data() {
+    return { items }
+  }
 }
+
+export default new NavBarComponent
+
 </script>

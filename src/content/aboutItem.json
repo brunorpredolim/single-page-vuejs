@@ -1,0 +1,6 @@
+[
+  { "idName": "#home", "name": "Home" },
+  { "idName": "#project", "name": "Projetos" },
+  { "idName": "#about", "name": "Sobre" },
+  { "idName": "#contact", "name": "Contato" }
+]
