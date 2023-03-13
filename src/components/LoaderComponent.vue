@@ -6,28 +6,15 @@
 
 <script>
 
-
-// document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-//   anchor.addEventListener('click', function (e) {
-
-//     e.preventDefault();
-//     var href = anchor.getAttribute('href');
-//     if (href != null) {
-//       document.querySelector(href)?.scrollIntoView({
-//         behavior: 'smooth',
-//       });
-//     }
-//   });
-// });
-
-export default {
-
-
-  name: 'LoaderComponent',
-  props: {
-    msg: String
-  },
+class LoaderComponent {
+  name =  'LoaderComponent'
+  props = {
+  }
+  
   mounted() {
+      
+  
+
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -44,8 +31,9 @@ export default {
   }
 
 }
+
+export default new LoaderComponent;
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 </style>
