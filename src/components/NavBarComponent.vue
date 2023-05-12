@@ -10,7 +10,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="navbar-collapse collapse" id="responsive-navbar-nav">
-      <div style="padding-left:1000px" class="ml-auto mr-5 navbar-nav">
+      <div style="padding-left:60%" class="ml-auto mr-5 navbar-nav">
         <a v-for="(item, index) in items" v-bind:href=item.idName v-bind:data-rnameIdb-event-key=item.idName
           class="px-3 nav-link" v-bind:id="index" :key='item.id'>{{ item.name }}</a>
         <a rel="noopener noreferrer" target="_blank" href="#" class="px-3 nav-link" role="button">

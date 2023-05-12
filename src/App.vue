@@ -51,7 +51,7 @@ export default {
   created: function() {
     
    // loadingListener();
-  },
+  }
 }
 </script>
 
